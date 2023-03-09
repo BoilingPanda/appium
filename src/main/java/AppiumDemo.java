@@ -23,7 +23,7 @@ public class AppiumDemo
     public  void setupAppium() throws MalformedURLException
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         capabilities.setCapability("appPackage","com.whatsapp");
         capabilities.setCapability("appActivity","Main");
@@ -32,7 +32,7 @@ public class AppiumDemo
         capabilities.setCapability("fullReset", false);
         capabilities.setCapability("autoGrantPermissions",true);
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://10.0.10.5:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
