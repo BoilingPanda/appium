@@ -37,6 +37,6 @@ public class AppiumDemo
     }
 
     @Test (enabled=true) public void myFirstTest() throws InterruptedException {
-        System.out.println("Test Completed.");
+        System.out.println("Test 1 Completed.");
     }
 }
