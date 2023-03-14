@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <appium-java-client-version>8.3.0</appium-java-client-version>
         <selenium-java-version>3.141.59</selenium-java-version>
-        <testng-version>7.7.0</testng-version>
+        <testng-version>7.3.0</testng-version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
