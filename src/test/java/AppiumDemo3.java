@@ -30,7 +30,7 @@ public class AppiumDemo3
         capabilities.setCapability("autoGrantPermissions",true);
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
         capabilities.setCapability("udid", "R68T9014G1N");
-        capabilities.setCapability("systemPort", 8203);
+        capabilities.setCapability("systemPort", 8206);
         driver = new AndroidDriver(new URL("http://10.0.10.5:4727/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
