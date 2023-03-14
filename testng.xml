@@ -8,6 +8,7 @@
         <parameter name="platformVersion" value="12"/>
         <parameter name="deviceName" value="phone-1-WA"/>
         <parameter name="portNumber" value="4723"/>
+        <parameter name="systemPort" value="8205"/>
         <classes>
             <class name="AppiumDemo"/>
         </classes>
@@ -18,6 +19,7 @@
         <parameter name="platformVersion" value="12"/>
         <parameter name="deviceName" value="phone-2-SMS"/>
         <parameter name="portNumber" value="4725"/>
+        <parameter name="systemPort" value="8206"/>
         <classes>
             <class name="AppiumDemo2"/>
         </classes>
@@ -28,6 +30,7 @@
         <parameter name="platformVersion" value="12"/>
         <parameter name="deviceName" value="phone-4-SMS"/>
         <parameter name="portNumber" value="4727"/>
+        <parameter name="systemPort" value="8207"/>
         <classes>
             <class name="AppiumDemo3"/>
         </classes>
@@ -38,6 +41,7 @@
         <parameter name="platformVersion" value="12"/>
         <parameter name="deviceName" value="phone-3-WA"/>
         <parameter name="portNumber" value="4729"/>
+        <parameter name="systemPort" value="8208"/>
         <classes>
             <class name="AppiumDemo4"/>
         </classes>
