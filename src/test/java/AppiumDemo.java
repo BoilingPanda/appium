@@ -17,7 +17,7 @@ public class AppiumDemo
 {
     public static URL url;
     public static DesiredCapabilities capabilities;
-    public static RemoteWebDriver driver;
+    public static AndroidDriver driver;
 
     @BeforeSuite
     public  void setupAppium() throws MalformedURLException
