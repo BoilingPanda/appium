@@ -6,6 +6,8 @@
     <test name="AppiumDemo">
         <parameter name="udid" value="RFCNA0967YN"/>
         <parameter name="platformVersion" value="12"/>
+        <parameter name="deviceName" value="phone-1-WA"/>
+        <parameter name="portNumber" value="4723"/>
         <classes>
             <class name="AppiumDemo"/>
         </classes>
@@ -14,6 +16,8 @@
     <test name="AppiumDemo2">
         <parameter name="udid" value="R6CT7003HQR"/>
         <parameter name="platformVersion" value="12"/>
+        <parameter name="deviceName" value="phone-2-SMS"/>
+        <parameter name="portNumber" value="4725"/>
         <classes>
             <class name="AppiumDemo2"/>
         </classes>
@@ -22,6 +26,8 @@
     <test name="AppiumDemo3">
         <parameter name="udid" value="R68T9014G1N"/>
         <parameter name="platformVersion" value="12"/>
+        <parameter name="deviceName" value="phone-4-SMS"/>
+        <parameter name="portNumber" value="4727"/>
         <classes>
             <class name="AppiumDemo3"/>
         </classes>
@@ -30,6 +36,8 @@
     <test name="AppiumDemo4">
         <parameter name="udid" value="R68T6029W3R"/>
         <parameter name="platformVersion" value="12"/>
+        <parameter name="deviceName" value="phone-3-WA"/>
+        <parameter name="portNumber" value="4729"/>
         <classes>
             <class name="AppiumDemo4"/>
         </classes>
