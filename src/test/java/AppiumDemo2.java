@@ -29,7 +29,7 @@ public class AppiumDemo2
         capabilities.setCapability("fullReset", false);
         capabilities.setCapability("autoGrantPermissions",true);
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
-        capabilities.setCapability("adbPort", 5040);
+        capabilities.setCapability("udid", "R6CT7003HQR");
         capabilities.setCapability("systemPort", 8203);
         driver = new AndroidDriver(new URL("http://10.0.10.5:4725/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
