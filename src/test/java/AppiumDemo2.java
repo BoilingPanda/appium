@@ -28,7 +28,7 @@ public class AppiumDemo2
         capabilities.setCapability("fullReset", false);
         capabilities.setCapability("autoGrantPermissions",true);
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
-        driver = new RemoteWebDriver(new URL("http://10.0.10.5:4724/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://10.0.10.5:4725/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
