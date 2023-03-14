@@ -1,20 +1,10 @@
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobilePlatform;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 public class AppiumDemo
@@ -26,7 +16,7 @@ public class AppiumDemo
     @BeforeSuite
     public  void setupAppium() throws MalformedURLException
     {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         capabilities.setCapability("appPackage","com.whatsapp");
