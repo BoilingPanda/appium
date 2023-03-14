@@ -22,8 +22,6 @@ public class AppiumDemo
     public static URL url;
     public static DesiredCapabilities capabilities;
     public static AndroidDriver driver;
-    private AppiumDriver appDriver;
-    private static AppiumDriverLocalService service;
 
     @BeforeSuite
     public  void setupAppium() throws MalformedURLException
@@ -38,14 +36,6 @@ public class AppiumDemo
         capabilities.setCapability("fullReset", false);
         capabilities.setCapability("autoGrantPermissions",true);
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
-        AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder();
-        serviceBuilder.withEnvironment(System.getenv());
-        serviceBuilder.withIPAddress("10.0.10.5")
-                .usingPort(4729)
-                .withAppiumJS(new File("/usr/local/bin/appium"))
-                .withEnvironment(System.getenv());
-        service = AppiumDriverLocalService.buildService(serviceBuilder);
-        service.start();
         driver = new AndroidDriver(new URL("http://10.0.10.5:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
