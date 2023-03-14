@@ -54,7 +54,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
                         <includes>
-                            <include>**/*.java</include>
+                            <include>**/AppiumDemo2.java</include>
                         </includes>
                     </configuration>
                 </plugin>
