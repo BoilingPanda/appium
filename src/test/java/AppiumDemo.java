@@ -2,7 +2,10 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobilePlatform;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -18,7 +21,9 @@ public class AppiumDemo
 {
     public static URL url;
     public static DesiredCapabilities capabilities;
-    public static RemoteWebDriver driver;
+    public static AndroidDriver driver;
+    private AppiumDriver appDriver;
+    private static AppiumDriverLocalService service;
 
     @BeforeSuite
     public  void setupAppium() throws MalformedURLException
@@ -35,7 +40,13 @@ public class AppiumDemo
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
         AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder();
         serviceBuilder.withEnvironment(System.getenv());
-        driver = new RemoteWebDriver(new URL("http://10.0.10.5:4723/wd/hub"), capabilities);
+        serviceBuilder.withIPAddress("10.0.10.5")
+                .usingPort(4729)
+                .withAppiumJS(new File("/usr/local/bin/appium"))
+                .withEnvironment(System.getenv());
+        service = AppiumDriverLocalService.buildService(serviceBuilder);
+        service.start();
+        driver = new AndroidDriver(new URL("http://10.0.10.5:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
