@@ -29,7 +29,7 @@ public class BaseTest {
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("appPackage","com.whatsapp");
-        capabilities.setCapability("appActivity","MainActivity");
+        capabilities.setCapability("appActivity","Main");
         capabilities.setCapability("autoAcceptAlerts",true);
         capabilities.setCapability("noReset",true);
         capabilities.setCapability("fullReset", false);
