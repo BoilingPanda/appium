@@ -44,6 +44,6 @@ public class BaseTest {
 
     @AfterMethod
     public void closeDriver(){
-        getDriver().quit();
+        //getDriver().quit();
     }
 }
