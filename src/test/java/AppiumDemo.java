@@ -10,6 +10,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class AppiumDemo extends BaseTest
 {
     @Test (enabled=true) public void myFirstTest() throws InterruptedException {
+        getDriver().get("https://inone.useinsider.com");
         System.out.println("Test 1 Completed.");
     }
 }

@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class AppiumDemo2 extends BaseTest
 {
     @Test (enabled=true) public void mySecondTest() throws InterruptedException {
+        getDriver().get("https://inone.useinsider.com");
         System.out.println("Test 2 Completed.");
     }
 }
