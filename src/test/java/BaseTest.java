@@ -28,9 +28,9 @@ public class BaseTest {
         capabilities.setCapability("deviceName", deviceName);
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("platformName", "Android");
-        //capabilities.setCapability("appPackage","com.whatsapp");
-        //capabilities.setCapability("appActivity","Main");
-        capabilities.setCapability("browserName", "Chrome");
+        capabilities.setCapability("appPackage","com.whatsapp");
+        capabilities.setCapability("appActivity","Main");
+        //capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("autoAcceptAlerts",true);
         capabilities.setCapability("noReset",true);
         capabilities.setCapability("fullReset", false);
